@@ -1,0 +1,27 @@
+<div class="pt-lg pb-lg">
+  <div class="lead-list">
+    <h2>Leads List</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Cell Phone</th>
+          <th>Home Phone</th>
+          <th>Source</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let lead of leads">
+          <td><a [routerLink]="['/leads', lead.lead_id]">{{ lead.first_name }}</a></td>
+          <td>{{ lead.last_name }}</td>
+          <td>{{ lead.email }}</td>
+          <td>{{ lead.cell_phone }}</td>
+          <td>{{ lead.home_phone }}</td>
+          <td>{{ lead.source }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

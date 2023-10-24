@@ -1,0 +1,12 @@
+<div class="pt-lg pb-lg">
+  <div class="combined-component">
+    <h1>Potential Duplicates</h1>
+    <p>Lead ID: {{ leadId }}</p>
+    <ul>
+      <li *ngFor="let duplicateId of potentialDuplicates">
+        <button (click)="markDuplicate(leadId, duplicateId)">Mark as Duplicate</button>
+        {{ duplicateId }}
+      </li>
+    </ul>
+  </div>
+</div>
